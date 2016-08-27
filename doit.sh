@@ -22,4 +22,4 @@ echo $ipv4
 echo ""
 echo "trying ssh"
 sleep 5
-ssh -vi d_keyfile root@$ipv4
+ssh -vi $d_keyfile root@$ipv4
