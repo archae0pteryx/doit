@@ -1,5 +1,5 @@
 #!/bin/bash
-d_keyfile='~/Code/Repos/kittens/0000000'
+d_keyfile="~/Code/Repos/kittens/0000000"
 d_name='monkies'
 d_image='ubuntu-16-04-x64'
 d_size='512mb'
@@ -20,6 +20,6 @@ echo "POW!"
 ipv4=$(doctl compute droplet list | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')
 echo $ipv4
 echo ""
-echo "trying ssh"
-sleep 5
+echo "trying ssh in 10s"
+sleep 10
 ssh -vi $d_keyfile root@$ipv4
