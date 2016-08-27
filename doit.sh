@@ -15,11 +15,11 @@ sleep 4
 echo "0_o"
 sleep 7
 echo "Wait for it"
-sleep 3
-echo "POW!"
+sleep 4
+echo "the monkies IP"
 ipv4=$(doctl compute droplet list | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')
 echo $ipv4
 echo ""
-echo "trying ssh in 10s"
-sleep 10
+echo "trying ssh in 20s"
+sleep 20
 ssh -vi $d_keyfile root@$ipv4
