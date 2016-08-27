@@ -22,5 +22,5 @@ echo $ipv4
 echo ""
 echo "trying ssh in 20s"
 sleep 20
-scp -r -i $d_keyfile ../kittens root@$ipv4:/home/root/
+scp -r -i $d_keyfile ../kittens root@$ipv4
 ssh -vi $d_keyfile root@$ipv4
