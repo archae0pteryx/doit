@@ -1,5 +1,5 @@
 #!/bin/bash
-d_keyfile="~/Code/Repos/kittens/0000000"
+d_keyfile="0000000"
 d_name='monkies'
 d_image='ubuntu-16-04-x64'
 d_size='512mb'
