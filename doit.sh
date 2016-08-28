@@ -37,7 +37,7 @@ echo "ssh in 20"
 echo ""
 sleep 1
 echo "COPY PASTA:"
-echo "git clone https://github.com/archae0pteryx/kittens.git"
+echo "git clone https://github.com/archae0pteryx/kittens.git && cd kittens && ./kittens.sh"
 sleep 15
 #scp -r -i $d_keyfile ../kittens root@$ipv4
 ssh -vi $d_keyfile root@$ipv4
