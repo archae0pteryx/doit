@@ -1,6 +1,6 @@
 #!/bin/bash
 d_keyfile="0000000"
-d_name='monkies'
+d_name='default'
 d_image='ubuntu-16-04-x64'
 d_size='512mb'
 d_reg='sfo1'
