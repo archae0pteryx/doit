@@ -1,7 +1,7 @@
 #!/bin/bash
 copy_pasta="git clone https://github.com/archae0pteryx/kittens.git && cd kittens && ./kittens.sh"
-priv_do_keyfile="path_to_private_key" # usually your ~/.ssh/id_rsa
-pub_do_keyfile="path_to_public_key"
+priv_do_keyfile="/home/xenu/cry/pee/si_rsa" # usually your ~/.ssh/id_rsa
+pub_do_keyfile="/home/xenu/cry/pee/si_rsa.pub"
 d_name='db'
 d_image='ubuntu-16-04-x64'
 d_size='512mb'
@@ -11,7 +11,7 @@ d_reg='sfo1'
 gen_fingerprint () {
   ssh-keygen -E md5 -lf $pub_do_keyfile > hulk-o-mania/fp.pub
   echo "Fingerprint [+]"
-  cat hulk-o-mania/fp.pub
+  cat ./hulk-o-mania/fp.pub
   sleep 1
 }
 root_check () {
