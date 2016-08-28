@@ -27,7 +27,7 @@ echo "Maul IT!!!!"
 sleep 2
 clear
 echo ""
-"PLADOW\!"
+echo "PLADOW!"
 sleep 2
 echo "Delicious fat bitches IP:"
 ipv4=$(doctl compute droplet list | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')
