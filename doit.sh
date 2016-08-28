@@ -1,7 +1,7 @@
 #!/bin/bash
 copy_pasta="git clone https://github.com/archae0pteryx/kittens.git && cd kittens && ./kittens.sh"
 priv_do_keyfile="/home/xenu/cry/pee/si_rsa" # usually your ~/.ssh/id_rsa
-pub_do_keyfile="/home/xenu/cry/pee/si_rsa.pub"
+pub_do_keyfile="/home/xenu/cry/public/si_rsa.pub"
 d_name='db'
 d_image='ubuntu-16-04-x64'
 d_size='512mb'
