@@ -8,7 +8,7 @@ d_key='fb:86:91:f8:a8:d2:76:39:dd:bb:61:3d:a4:13:97:fa'
 clear
 echo ""
 doctl compute droplet create $d_name --region $d_reg --image $d_image	--size $d_size --ssh-keys $d_key
-sleep 10
+sleep 13
 echo "Droplets IP:"
 ipv4=$(doctl compute droplet list | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')
 echo $ipv4
