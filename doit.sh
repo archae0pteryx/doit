@@ -8,19 +8,34 @@ d_key='fb:86:91:f8:a8:d2:76:39:dd:bb:61:3d:a4:13:97:fa'
 
 doctl compute droplet create $d_name --region $d_reg --image $d_image	--size $d_size --ssh-keys $d_key
 echo ""
-echo "Give the monkies a min to squabble..."
+echo "Did you see that bitch take a camera phone photo of me!?"
+sleep 3
+echo "Hold up nigga this is not. a. drill."
 sleep 3
 echo "..."
-sleep 4
-echo "0_o"
-sleep 7
+sleep 3
+echo "..."
+sleep 3
 echo "Wait for it"
-sleep 4
-echo "the monkies IP"
+sleep 3
+echo "Wait for it"
+echo 2
+echo "...waaait for it..."
+sleep 7
+echo "Maul IT!!!!"
+sleep 2
+clear
+"PLADOW!"
+sleep 2
+echo "Delicious fat bitches IP:"
 ipv4=$(doctl compute droplet list | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')
 echo $ipv4
 echo ""
-echo "trying ssh in 20s"
-sleep 20
+echo "ssh in 20"
+echo ""
+sleep 1
+echo "COPY PASTA:"
+echo "git clone https://github.com/archae0pteryx/kittens.git"
+sleep 15
 #scp -r -i $d_keyfile ../kittens root@$ipv4
 ssh -vi $d_keyfile root@$ipv4
