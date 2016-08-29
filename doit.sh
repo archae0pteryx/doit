@@ -1,10 +1,10 @@
 #!/bin/bash
-d_keyfile="/home/xenu/cry/pee/si_rsa"
+d_keyfile="/home/xenu/Code/Repos/doit/.keys/secured_rsa"
 d_name='database'
 d_image='ubuntu-16-04-x64'
 d_size='512mb'
 d_reg='sfo1'
-d_key='54:f1:11:f9:9e:b6:30:8f:96:d2:20:8d:5b:cf:25'
+d_key='d1:6d:8f:4e:67:5e:9c:e9:16:4b:b0:4f:e9:85:80:f7'
 #curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer " -d '{"name":"","public_key":""}' "https://api.digitalocean.com/v2/account/keys"
 doctl compute droplet create $d_name --region $d_reg --image $d_image	--size $d_size --ssh-keys $d_key
 echo ""
