@@ -1,19 +1,20 @@
 #!/bin/bash
 copy_pasta="git clone https://github.com/archae0pteryx/kittens.git && cd kittens && ./kittens.sh"
-priv_do_keyfile="/home/xenu/cry/pee/si_rsa" # usually your ~/.ssh/id_rsa
-pub_do_keyfile="/home/xenu/cry/public/si_rsa.pub"
-d_name='db'
+priv_do_keyfile="key" # usually your ~/.ssh/id_rsa
+pub_do_keyfile="key.pub"
+d_key="54:f1:11:f9:9e:b6:30:8f:96:d2:20:8d:5b:cf:25:db"
+d_name='dbase'
 d_image='ubuntu-16-04-x64'
 d_size='512mb'
 d_reg='sfo1'
 
 
-gen_fingerprint () {
-  ssh-keygen -E md5 -lf $pub_do_keyfile > hulk-o-mania/fp.pub
-  echo "Fingerprint [+]"
-  cat ./hulk-o-mania/fp.pub
-  sleep 1
-}
+# gen_fingerprint () {
+#   ssh-keygen -E md5 -lf $pub_do_keyfile > hulk-o-mania/fp.pub
+#   echo "Fingerprint [+]"
+#   cat ./hulk-o-mania/fp.pub
+#   sleep 1
+# }
 root_check () {
 	if [[ "$EUID" -ne 0 ]]; then
 		echo "root dagnabbit. root!"
@@ -81,7 +82,7 @@ opts () {
 }
 
 godo () {
-  doctl compute droplet create $d_name --region $d_reg --image $d_image	--size $d_size --ssh-keys fp.pub || echo "there was a problem duder."
+  doctl compute droplet create $d_name --region $d_reg --image $d_image	--size $d_size --ssh-keys $d_key
   echo "Please wait..."
   sleep 13
   echo "Droplets IP:"
@@ -100,8 +101,6 @@ godo () {
 
 
 root_check
-doctl_check
-gen_fingerprint
 home
 while true
 do
