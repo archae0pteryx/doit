@@ -86,7 +86,9 @@ set_image () {
 		"o") oneclick ;;
 		"h") home ;;
 		"m") read -r -p "Which image? " d_image && set_arch ;;
+	esac
 }
+
 set_arch () {
 	read -r -p "Please Select Architecture" choice
 	echo "1. AMD_64"
