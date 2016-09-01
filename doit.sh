@@ -2,6 +2,7 @@
 copy_pasta="git clone https://github.com/archae0pteryx/kittens.git && cd kittens && ./kittens.sh"
 priv_do_keyfile="key" # usually your ~/.ssh/id_rsa
 pub_do_keyfile="key.pub"
+d_arch="x64"
 d_key="54:f1:11:f9:9e:b6:30:8f:96:d2:20:8d:5b:cf:25:db"
 d_name='dbase'
 d_image='ubuntu-16-04-x64'
@@ -64,9 +65,49 @@ echo '_______________________________________________________________'
 echo '                                    DO Droplet Generator       '
 echo '_______________________________________________________________'
 }
-
+set_image () {
+	clear
+	echo "(u)buntu 16"
+	echo "(d)ebian 8"
+	echo "(c)entOS 7"
+	echo "(f)edora 23"
+	echo "(b)freeBSD 10.3"
+	echo "(o)ne click installs"
+	echo "(m)anual entry"
+	echo "(h)ome"
+	echo ""
+	read -r -p "Select base OS: " choice
+	case $choice in
+		"u") d_image="ubuntu-16-04-" && set_arch;;
+		"d") d_image="debian-8-" && set_arch ;;
+		"c") d_image="centos-7-0-" && set_arch ;;
+		"f") d_image="fedora-23-" && set_arch ;;
+		"b") d_image="freebsd-10-3-" && set_arch ;;
+		"o") oneclick ;;
+		"h") home ;;
+		"m") read -r -p "Which image? " d_image && set_arch ;;
+}
+set_arch () {
+	read -r -p "Please Select Architecture" choice
+	echo "1. AMD_64"
+	echo "2. i386"
+	echo ""
+	echo "(b)ack"
+	case $choice in
+	  "1") d_arch="x64" && set_name;;
+	  "2") d_arch="x32" && set_name;;
+    "b") home ;;
+		*) echo -e "${RED}Please Choose a valid option${STD}" && sleep 2
+	esac
+}
+set_name () {
+	read -r -p "Droplet Name: " d_name && set_mem
+}
+set_mem () {
+	return
+}
 show_menus() {
-  echo "(D)efaults"
+  echo "(D)oit"
   echo "(S)et Up"
 	echo "(Q)uit"
 }
