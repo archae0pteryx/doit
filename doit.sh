@@ -1,7 +1,11 @@
 #!/bin/bash
 copy_pasta="git clone https://github.com/archae0pteryx/kittens.git && cd kittens && ./kittens.sh"
+0_o="wat?"
+# Keys and Such
 priv_do_keyfile="key" # usually your ~/.ssh/id_rsa
 pub_do_keyfile="key.pub"
+
+# "D" For Droplet.
 d_arch="x64"
 d_key="54:f1:11:f9:9e:b6:30:8f:96:d2:20:8d:5b:cf:25:db"
 d_name='dbase'
@@ -9,16 +13,17 @@ d_image='ubuntu-16-04-x64'
 d_size='512mb'
 d_reg='sfo1'
 
-
+# FIXME!
 # gen_fingerprint () {
 #   ssh-keygen -E md5 -lf $pub_do_keyfile > hulk-o-mania/fp.pub
 #   echo "Fingerprint [+]"
 #   cat ./hulk-o-mania/fp.pub
 #   sleep 1
 # }
+
 root_check () {
 	if [[ "$EUID" -ne 0 ]]; then
-		echo "root dagnabbit. root!"
+		echo "Root dagnabbit. Root!"
 		sleep 1
 		exit 0
 	else
@@ -26,6 +31,7 @@ root_check () {
     sleep 1
 	fi
 }
+
 doctl_check () {
   if [[ ! -e /usr/local/bin/doctl ]]; then
     echo "doctl not installed!"
@@ -34,8 +40,10 @@ doctl_check () {
   echo "doctl [+]"
   sleep 1
 }
+
 setup () {
   echo "Not built yet."
+	#Placeholder for final function execution.
 }
 
 home () {
@@ -65,6 +73,7 @@ echo '_______________________________________________________________'
 echo '                                    DO Droplet Generator       '
 echo '_______________________________________________________________'
 }
+
 set_image () {
 	clear
 	echo "(u)buntu 16"
@@ -129,7 +138,8 @@ godo () {
   echo "Please wait..."
   sleep 13
   echo "Droplets IP:"
-  ipv4=$(doctl compute droplet list | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')
+#FIXME For multiple Droplets Pulls All IP! No Bueno.
+	ipv4=$(doctl compute droplet list | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')
   echo $ipv4
   echo "ssh in 20"
   sleep 1
