@@ -1,4 +1,5 @@
 # Just D.O. it.
+[![Build Status](https://travis-ci.org/archae0pteryx/doit.svg?branch=master)](https://travis-ci.org/archae0pteryx/doit)
 ## Installation:
 Get DOCTL https://github.com/digitalocean/doctl
 Then BASH!
