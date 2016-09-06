@@ -1,5 +1,8 @@
 # Just D.O. it.
+---
 [![Build Status](https://travis-ci.org/archae0pteryx/doit.svg?branch=master)](https://travis-ci.org/archae0pteryx/doit)
+---
+
 ## Installation:
 Get DOCTL https://github.com/digitalocean/doctl
 Then BASH!
@@ -10,6 +13,7 @@ A simple Digital Ocean cli (doctl) script for creating an instance and then retr
 1. Better IP Grep - maybe cut -c?
 2. Options to set non-default vars
 3. Fix md5 fingerprinting
+
 ### Please note:
 Due to the extremely large codebase I will not be accepting pull requests thank you.
 
