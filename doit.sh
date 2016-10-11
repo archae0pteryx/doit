@@ -36,7 +36,13 @@ doctl_check () {
   if [[ ! -e /usr/local/bin/doctl ]]; then
     echo "doctl not installed!"
     exit 0
-  fi
+	else
+		echo "Please install doctl!"
+		read -r -p "would you like me to do that? (OSX only) (y/N) " choice
+			case $choice in
+				"y") brew install doctl
+			esac
+	fi
   echo "doctl [+]"
   sleep 1
 }
